@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
-
 using FreeCourse.IdentityServer.Data;
 using FreeCourse.IdentityServer.Models;
 using Microsoft.AspNetCore.Hosting;
@@ -43,7 +42,7 @@ namespace FreeCourse.IdentityServer
             {
                 var host = CreateHostBuilder(args).Build();
 
-                using(var scope = host.Services.CreateScope())
+                using (var scope = host.Services.CreateScope())
                 {
                     var serviceProvider = scope.ServiceProvider;
 
@@ -55,7 +54,7 @@ namespace FreeCourse.IdentityServer
 
                     if (!userManager.Users.Any())
                     {
-                        userManager.CreateAsync(new ApplicationUser { UserName = "eatalay13", Email = "emrahatalay92@gmail.com" }, "Embe3413+").Wait();
+                        userManager.CreateAsync(new ApplicationUser { UserName = "fcakiroglu16", Email = "f-cakiroglu@outlook.com", City = "Ankara" }, "Password12*").Wait();
                     }
                 }
 
